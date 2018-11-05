@@ -30,7 +30,7 @@ public class EmployeeDatabase {
     /**
      * Returns the manager for the given employee.
      *
-     * @param employee
+     * @param employee the employee
      * @return
      */
     Employee findManager(final Employee employee) {
@@ -56,6 +56,10 @@ public class EmployeeDatabase {
         /*
          * Implement this function
          */
+        if (findManager(employee) == null) {
+            return 0;
+        }
+        return countManagersAbove(findManager(employee)) + 1;
     }
 
     /**
@@ -70,6 +74,10 @@ public class EmployeeDatabase {
         /*
          * Implement this function
          */
+        if (countManagersAbove(employee) == 0) {
+            return employees.size() - 1;
+        }
+        return 0;
     }
 
     /**

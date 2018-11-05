@@ -4,8 +4,9 @@
  * @see <a href="https://cs125.cs.illinois.edu/lab/9/">Lab 9 Description</a>
  */
 public class Employee {
-
+    /** The name of employee. */
     private String name;
+    /** The employee's manager. */
     private String manager;
 
     /**
